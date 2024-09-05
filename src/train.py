@@ -10,7 +10,7 @@ from sklearn.tree import DecisionTreeClassifier
 
 # Cargar la tabla transformada
 def read_file_csv(filename):
-    df = pd.read_csv(os.path.join('../data/processed', filename)).set_index('ID')
+    df = pd.read_csv(os.path.join('../data/processed', filename))
     X_train = df.drop(["Survived"],axis=1)
     y_train = df[["Survived"]]
     print(filename, ' cargado correctamente')
