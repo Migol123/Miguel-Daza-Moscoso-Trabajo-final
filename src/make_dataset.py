@@ -9,7 +9,7 @@ import os
 
 # Leemos los archivos csv
 def read_file_csv(filename):
-    df = pd.read_csv(os.path.join('../data/raw/', filename)).set_index('ID')
+    df = pd.read_csv(os.path.join('../data/raw/', filename))
     print(filename, ' cargado correctamente')
     return df
 
