@@ -16,7 +16,7 @@ def read_file_csv(filename):
 
 # Realizamos la transformación de datos
 def data_preparation(df):
-    df=df.drop.drop(['Ticket', 'Cabin'], axis=1)
+    df=df.drop(['Ticket', 'Cabin'], axis=1)
     df['Title'] = df.Name.str.extract(' ([A-Za-z]+)\.', expand=False)
     df['Title'] = df['Title'].replace(['Lady', 'Countess','Capt', 'Col',\
  	'Don', 'Dr', 'Major', 'Rev', 'Sir', 'Jonkheer', 'Dona'], 'Rare')
