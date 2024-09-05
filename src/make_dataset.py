@@ -64,15 +64,15 @@ def main():
     # Matriz de Entrenamiento
     df1 = read_file_csv('train.csv')
     tdf1 = data_preparation(df1)
-    data_exporting(tdf1, ['Survived', 'Pclass', 'Sex', 'Age', 'Fare', 'Embarked', 'Title','IsAlone', 'Age*Class'],'credit_train.csv')
+    data_exporting(tdf1, ['Survived', 'Pclass', 'Sex', 'Age', 'Fare', 'Embarked', 'Title','IsAlone', 'Age*Class'],'train.csv')
     # Matriz de Validación
     df2 = read_file_csv('val.csv')
     tdf2 = data_preparation(df2)
-    data_exporting(tdf2,['Survived', 'Pclass', 'Sex', 'Age', 'Fare', 'Embarked', 'Title','IsAlone', 'Age*Class'],'credit_val.csv')
+    data_exporting(tdf2,['Survived', 'Pclass', 'Sex', 'Age', 'Fare', 'Embarked', 'Title','IsAlone', 'Age*Class'],'val.csv')
     # Matriz de Scoring
-    df3 = read_file_csv('train.csv')
+    df3 = read_file_csv('test.csv')
     tdf3 = data_preparation(df3)
-    data_exporting(tdf3,['Pclass', 'Sex', 'Age', 'Fare', 'Embarked', 'Title','IsAlone', 'Age*Class'],'credit_score.csv')
+    data_exporting(tdf3,['Pclass', 'Sex', 'Age', 'Fare', 'Embarked', 'Title','IsAlone', 'Age*Class'],'test.csv')
     
 if __name__ == "__main__":
     main()
